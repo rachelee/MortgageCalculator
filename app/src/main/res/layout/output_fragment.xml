@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout android:id="@+id/modify_block"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp">
+
+        <LinearLayout android:id="@+id/terms_block"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView style="@style/LabelTheme"
+                android:id="@+id/terms"
+                android:text="@string/terms"
+                />
+            <Spinner
+                android:id="@+id/edit_spinner_terms"
+                android:layout_weight="5"
+                android:layout_width="0dp"
+                android:entries="@array/terms_array"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+        <LinearLayout android:id="@+id/rate_block"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/terms_block">
+            <TextView style="@style/LabelTheme"
+                android:id="@+id/rate"
+                android:text="@string/interest_rate"
+                />
+            <EditText style="@style/EditTextTheme"
+                android:id="@+id/edit_interest_rate"
+                android:inputType="numberDecimal"
+                android:hint="@string/interest_rate"
+                />
+
+        </LinearLayout>
+        <LinearLayout android:id="@+id/tax_block"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rate_block">
+            <TextView style="@style/LabelTheme"
+                android:id="@+id/tax"
+                android:text="@string/tax"
+                />
+            <EditText style="@style/EditTextTheme"
+                android:id="@+id/edit_property_tax"
+                android:inputType="numberDecimal"
+                android:hint="@string/tax"
+                />
+
+        </LinearLayout>
+        <Button style="@style/ButtonTheme"
+            android:id="@+id/re_calculate"
+            android:text="@string/button_calculate"
+            android:layout_below="@id/tax_block"
+            android:layout_centerHorizontal="true" />
+    </RelativeLayout>
+    <TextView android:id="@+id/payment_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Payments"
+        android:layout_below="@id/modify_block"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginRight="10dp"
+        android:textSize="24dp">
+    </TextView>
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/payment_label"
+        android:layout_margin="10dp">
+
+        <LinearLayout android:id="@+id/monthly_payment_block"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView style="@style/LabelTheme"
+                android:id="@+id/monthly_payment"
+                android:text="@string/monthly_payment"
+                />
+
+            <EditText style="@style/EditTextTheme"
+                android:id="@+id/monthly_payment_result"
+                />
+        </LinearLayout>
+        <LinearLayout android:id="@+id/interest_block"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/monthly_payment_block">
+
+            <TextView style="@style/LabelTheme"
+                android:id="@+id/interest_paid"
+                android:text="@string/interest_paid"
+                />
+
+            <EditText style="@style/EditTextTheme"
+                android:id="@+id/interest_paid_result"
+                />
+        </LinearLayout>
+        <LinearLayout android:id="@+id/tax_paid_block"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/interest_block">
+
+            <TextView style="@style/LabelTheme"
+                android:id="@+id/tax_paid"
+                android:text="@string/property_tax_paid"
+                />
+
+            <EditText style="@style/EditTextTheme"
+                android:id="@+id/tax_paid_result"
+                />
+        </LinearLayout>
+        <LinearLayout android:id="@+id/term_block"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tax_paid_block">
+
+            <TextView style="@style/LabelTheme"
+                android:id="@+id/payoff_date"
+                android:text="@string/payoff_date"
+                />
+
+            <EditText style="@style/EditTextTheme"
+                android:id="@+id/payoff_date_result"
+                />
+        </LinearLayout>
+
+    </RelativeLayout>
+</RelativeLayout>

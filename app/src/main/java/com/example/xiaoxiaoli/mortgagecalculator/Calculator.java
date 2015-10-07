@@ -52,7 +52,7 @@ public class Calculator {
     //calculate payoff date
     public String getPayOffDate(){
         Calendar calendar = new GregorianCalendar();
-        calendar.add(Calendar.MONTH, (int)n);
+        calendar.add(Calendar.MONTH, (int)n-1);
         Date date = calendar.getTime();
         String format = "MMM, yyyy";
         SimpleDateFormat df = new SimpleDateFormat(format);

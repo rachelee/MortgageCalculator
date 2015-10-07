@@ -1,8 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-    <RelativeLayout android:id="@+id/modify_block"
+    <RelativeLayout
+        android:visibility="gone"
+        android:id="@+id/modify_block"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="10dp">
@@ -40,7 +43,8 @@
         <LinearLayout android:id="@+id/tax_block"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/rate_block">
+            android:layout_below="@id/rate_block"
+            android:visibility="gone">
             <TextView style="@style/LabelTheme"
                 android:id="@+id/tax"
                 android:text="@string/tax"
@@ -56,7 +60,8 @@
             android:id="@+id/re_calculate"
             android:text="@string/button_calculate"
             android:layout_below="@id/tax_block"
-            android:layout_centerHorizontal="true" />
+            android:layout_centerHorizontal="true"
+            />
     </RelativeLayout>
     <TextView android:id="@+id/payment_label"
         android:layout_width="wrap_content"

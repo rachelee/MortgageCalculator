@@ -1,111 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:orientation="vertical"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:id="@+id/main">
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:baselineAligned="false"
+    android:orientation="horizontal">
+    <fragment class="com.example.xiaoxiaoli.mortgagecalculator.FragmentInput"
+        android:id="@+id/fragment_input"
+        android:layout_weight="1"
+        android:layout_width="0dp"
+        android:layout_height="match_parent" />
 
-    <LinearLayout android:id="@+id/home_value_block"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+    <FrameLayout
+        android:id="@+id/fragment_output"
+        android:layout_weight="1"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"/>
 
-        <TextView android:id="@+id/home_value"
-            android:layout_weight="2"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:text="@string/home_value"
-            />
-
-        <EditText
-            android:id="@+id/input_home_value"
-            android:layout_weight="5"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:inputType="number"
-            android:hint="@string/home_value"
-            />
-    </LinearLayout>
-    <LinearLayout android:id="@+id/down_payment_block"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-        <TextView android:id="@+id/down_payment"
-            android:layout_weight="2"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:text="@string/down_payment"
-            />
-
-        <EditText
-            android:id="@+id/input_down_payment"
-            android:layout_weight="5"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:inputType="number"
-            android:hint="@string/down_payment"
-            />
-    </LinearLayout>
-    <LinearLayout android:id="@+id/interest_rate_block"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-        <TextView android:id="@+id/interest_rate"
-            android:layout_weight="2"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:text="@string/interest_rate"
-            />
-
-        <EditText
-            android:id="@+id/input_interest_rate"
-            android:layout_weight="5"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:inputType="number"
-            android:hint="@string/interest_rate"
-            />
-    </LinearLayout>
-    <LinearLayout android:id="@+id/terms_block"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-        <TextView android:id="@+id/terms"
-            android:layout_weight="2"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:text="@string/terms"
-            />
-        <Spinner
-            android:id="@+id/spinner_terms"
-            android:layout_weight="5"
-            android:layout_width="0dp"
-            android:entries="@array/terms_array"
-            android:layout_height="wrap_content" />
-
-    </LinearLayout>
-    <LinearLayout android:id="@+id/tax_block"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-        <TextView android:id="@+id/tax"
-            android:layout_weight="2"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:text="@string/tax"
-            />
-        <EditText
-            android:id="@+id/input_tax"
-            android:layout_weight="5"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:inputType="number"
-            android:hint="@string/tax"
-            />
-
-    </LinearLayout>
-
-    <Button android:id="@+id/calculate"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/button_calculate"
-        android:onClick="calculate"
-        android:layout_gravity="center_horizontal" />
 </LinearLayout>
